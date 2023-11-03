@@ -62,7 +62,7 @@ def filtering(df, sector_default_val, cap_default_val, option_sector, cap_value,
 @st.cache(suppress_st_warning=True)
 
 def read_data():
-    my_path = "initial_version/project/s&p500.csv"
+    my_path = "s&p500.csv"
     df = pd.read_csv(my_path)
     return df
 
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     st.title("S&P500 Screener & Analysis")
     st.sidebar.title("Search criteria")
 
-    image = Image.open('initial_version/project/stock.jpeg')
+    image = Image.open('stock.jpeg')
     _,col_image_2,_ =st.columns([1,3,1])
     with col_image_2:
         st.image(image, caption='@austindistel')
